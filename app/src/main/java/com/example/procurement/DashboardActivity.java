@@ -3,6 +3,8 @@ package com.example.procurement;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -19,6 +21,10 @@ import androidx.appcompat.widget.Toolbar;
 public class DashboardActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    TextView nav_header_user_name;
+    Bundle bundle;
+
+    private String userName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +40,21 @@ public class DashboardActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
+        bundle = new Bundle();
+        bundle = getIntent().getExtras();
+        if (bundle != null){
+            userName = bundle.getString("userName", userName);
+        }
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        View view = navigationView.getHeaderView(0);
+        nav_header_user_name = view.findViewById(R.id.nav_header_user_name);
+        nav_header_user_name.setText(""+userName);
+
+        Toast.makeText(this, "Welcome "+userName, Toast.LENGTH_SHORT).show();
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
