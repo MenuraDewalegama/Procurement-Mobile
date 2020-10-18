@@ -148,8 +148,6 @@ public class OrderPreviewActivity extends AppCompatActivity {
                     Order note = new Order(orderID, orderDate, fullName, designation, contact, projectName, siteAddress, products, orderTotal);
                     orderRef.add(note);
                     Toast.makeText(OrderPreviewActivity.this, "Order requested", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(OrderPreviewActivity.this, DashboardActivity.class);
-                    startActivity(intent);
 
                 }
             }
