@@ -11,9 +11,32 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_product">Product</string>
+    <string name="menu_order_history">Order History</string>
 
     <string name="home_second">Home Second</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="upload">Upload</string>
+    <string name="product_catalogue">Product Catalogue</string>
+    <string name="order">Order</string>
+    <string name="recently_requested_orders">Recently Requested Orders</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="name">Name :</string>
+    <string name="aaa">AAA</string>
+    <string name="designation">Designation :</string>
+    <string name="project_name">Project Name :</string>
+    <string name="site_address">Site Address :</string>
+    <string name="contact_no">Contact No :</string>
+    <string name="date_time">Date/Time :</string>
+    <string name="order_id">Order ID :</string>
+    <string name="order_amount">Order Amount :</string>
+    <string name="product">Product</string>
+    <string name="divider">|</string>
+    <string name="price">Price</string>
+    <string name="qty">Qty</string>
+    <string name="total">Total</string>
+    <string name="product_name">Product name</string>
 </resources>
