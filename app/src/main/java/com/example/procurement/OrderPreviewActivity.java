@@ -140,7 +140,6 @@ public class OrderPreviewActivity extends AppCompatActivity {
                     String details = "" +productItem.getQty() +" x " +productItem.getProductPrice() +" = " +productItem.getProductTotalPrice();
                     products.put(productItem.getProductName(), details);
                 }
-//                Order note = new Order(orderID, orderDate, fullName, designation, contact, projectName, siteAddress, products, orderTotal);
 
                 if(orderTotal>100000){
                     Toast.makeText(OrderPreviewActivity.this, "Can not order more than Rs.100,000, Please contact procurement", Toast.LENGTH_SHORT).show();
@@ -148,13 +147,11 @@ public class OrderPreviewActivity extends AppCompatActivity {
                 else {
                     Order note = new Order(orderID, orderDate, fullName, designation, contact, projectName, siteAddress, products, orderTotal);
                     orderRef.add(note);
-                    Toast.makeText(OrderPreviewActivity.this, "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OrderPreviewActivity.this, "Order requested", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(OrderPreviewActivity.this, DashboardActivity.class);
+                    startActivity(intent);
 
                 }
-//                orderRef.add(note);
-
-//                Toast.makeText(OrderPreviewActivity.this, "", Toast.LENGTH_SHORT).show();
-
             }
         });
 
